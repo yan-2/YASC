@@ -54,24 +54,6 @@
                                 <option v-for="item in leftOperations">{{item}}</option>
                             </select>
                         </div>
-<!--                        <div class="pure-control-group">-->
-<!--                            <label for="aligned-name">Orientation Beta</label>-->
-<!--                            <select class="custom-select select" v-model="form.lOrientationBeta">-->
-<!--                                <option v-for="item in leftOperations">{{item}}</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                        <div class="pure-control-group">-->
-<!--                            <label for="aligned-name">Orientation Gamma</label>-->
-<!--                            <select class="custom-select select" v-model="form.lOrientationGamma">-->
-<!--                                <option v-for="item in leftOperations">{{item}}</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                        <div class="pure-control-group">-->
-<!--                            <label for="aligned-name">Orientation Alpha</label>-->
-<!--                            <select class="custom-select select" v-model="form.lOrientationBetaAlpha">-->
-<!--                                <option v-for="item in leftOperations">{{item}}</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
                     </fieldset>
                 </form>
             </div>
@@ -192,7 +174,7 @@
                         </div>
 
                         <div class="pure-control-group">
-                            <label for="aligned-name">Vertical Move</label>
+                            <label for="aligned-name">3D Move</label>
                             <select class="custom-select select" v-model="form.RVerticalMove">
                                 <option v-for="item in noteOptions">{{item}}</option>
                             </select>
