@@ -1,12 +1,6 @@
 <template>
     <div class="container">
         <div class="sub-container clearfix">
-            <!--    <div>-->
-            <!--        <input id="show-visualize" type="checkbox" checked="true" />-->
-            <!--        <label for="show-visualize">Visualize Joycons</label>-->
-            <!--        <input id="show-debug" type="checkbox" />-->
-            <!--        <label for="show-debug">Show debug info</label>-->
-            <!--    </div>-->
             <h1 class="container-title">Custom Hotkeys</h1>
             <div class="left-container">
                 <h2 class="form-title center">Left Controller</h2>
@@ -237,10 +231,6 @@ export default {
     mounted() {
         let me = this
         me.refreshConfig()
-        // const debugLeft = document.querySelector('#debug-left');
-        // const debugRight = document.querySelector('#debug-right');
-        // const showVisualize = document.querySelector('#show-visualize');
-        // const showDebug = document.querySelector('#show-debug');
         const rootStyle = document.querySelector('.sub-container').style;
         const visualize = (joyCon, packet) => {
             if (!packet || !packet.actualOrientation) {
@@ -324,44 +314,10 @@ export default {
                     .querySelector('#joystick-right')
                     .classList.toggle('highlight', buttons.rightStick);
             }
-
-            // if (showDebug.checked) {
-            //     const controller = joyCon instanceof JoyConLeft ? debugLeft : debugRight;
-            //     controller.querySelector('pre').textContent =
-            //         JSON.stringify(orientation, null, 2) +
-            //         '\n' +
-            //         JSON.stringify(orientationQuaternion, null, 2) +
-            //         '\n' +
-            //         JSON.stringify(gyroscope, null, 2) +
-            //         '\n' +
-            //         JSON.stringify(accelerometer, null, 2) +
-            //         '\n';
-            //     const meterMultiplier = 300;
-            //     controller.querySelector('#acc-x').value =
-            //         accelerometer.x * meterMultiplier;
-            //     controller.querySelector('#acc-y').value =
-            //         accelerometer.y * meterMultiplier;
-            //     controller.querySelector('#acc-z').value =
-            //         accelerometer.z * meterMultiplier;
-            //
-            //     const gyroscopeMultiplier = 300;
-            //     controller.querySelector('#gyr-x').value =
-            //         gyroscope.rps.x * gyroscopeMultiplier;
-            //     controller.querySelector('#gyr-y').value =
-            //         gyroscope.rps.y * gyroscopeMultiplier;
-            //     controller.querySelector('#gyr-z').value =
-            //         gyroscope.rps.z * gyroscopeMultiplier;
-            // }
         };
         me.addInputCBK(function(joyCon, detail) {
             visualize(joyCon, detail);
         })
-
-        // showDebug.addEventListener('input', (e) => {
-        //     document.querySelector('#debug').style.display = e.target.checked
-        //         ? 'flex'
-        //         : 'none';
-        // });
     },
     methods:{
         refreshConfig(){
