@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
 })
 
 let server = app.listen(8081);
+console.log("Please open the address http://127.0.0.1:8081/");
 
 let wss = new WebSocket.Server({
     server: server
