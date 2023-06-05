@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>SubHorn</title>
+    <style>
+    body,html{
+        margin:0;
+        border:0;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    #c {
+        border:1px solid black;
+    }
+    #start{
+        width: 1024px;
+    }
+    .x{
+        position: relative;
+    }
+    #max{
+        top:0;
+        position: absolute;
+        right: 0;
+    }
+    .container{
+        margin-left: 60px;
+        width: 1024px;
+        position: relative;
+    }
+    .y{
+        position: absolute;
+        top:0;
+    }
+    .min-db{
+        left:-45px;
+        position: absolute;
+        top:490px;
+    }
+    .max-db{
+        left:-52px;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <canvas id="c" width="1024" height="512" style="width: 1024px;height: 512px"></canvas>
+    <div class="y">
+        <div class="min-db">-30dB</div>
+        <div class="max-db">-100dB</div>
+    </div>
+    <div class="x">
+        <div id="min">0</div>
+        <div id="max">12000Hz</div>
+    </div>
+    <div>
+        <button id='start'>start</button>
+    </div>
+</div>
+
+</body>
+<script>
+addEventListener('load', init);
+async function startCapture(displayMediaOptions) {
+    let captureStream;
+    try {
+        captureStream = await navigator.mediaDevices.getDisplayMedia(
+            displayMediaOptions
+        );
+    } catch (err) {
+        console.error(`Error: ${err}`);
+    }
+    return captureStream;
+}
+
+function init() {
+    let ctxElement = document.getElementById('c');
+    window.ctx = ctxElement.getContext('2d');
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+    let gradient = ctx.createLinearGradient(0, 0, 0, 200);
+    gradient.addColorStop(1, '#ADD8E6');
+    gradient.addColorStop(0.65, '#576D74');
+    gradient.addColorStop(0.45, '#FFAA00');
+    gradient.addColorStop(0, '#FF0000');
+    ctx.fillStyle = gradient;
+    let button = document.getElementById('start');
+    button.onclick = async()=>{
+        let localMediaStream = await startCapture({audio:true,video:true})
+        context = new AudioContext();
+        analyser = context.createAnalyser();
+        analyser.fftsize = 512;
+        analyser.smoothingTimeConstant = 0.9;
+        source = context.createMediaStreamSource(localMediaStream);
+        source.connect(analyser);
+        // frequency range
+        let maxFreq = getMaxFrequencyRange(context,analyser)
+        let max = document.getElementById('max');
+        max.innerText = maxFreq/2+'Hz';
+        console.log(analyser.minDecibels,analyser.maxDecibels)
+        draw(1024);
+    }
+}
+function getMaxFrequencyRange(context,analyser){
+    const sampleRate = context.sampleRate;
+    const fftSize = analyser.fftSize;
+    const frequencyBinCount = analyser.frequencyBinCount;
+    const binSize = sampleRate / fftSize;
+    const max = binSize * frequencyBinCount;
+    return max
+}
+function draw(w,) {
+    let array = new Uint8Array(analyser.frequencyBinCount);
+    analyser.getByteFrequencyData(array);
+    ctx.clearRect(0, 0, w, 512);
+    for (let i = 0; i < array.length; i++) {
+        let height = array[i] / 255*512;
+        ctx.fillRect(i*2, 512-height, 1, height);
+    }
+    requestAnimationFrame(draw);
+}
+</script>
+</html>

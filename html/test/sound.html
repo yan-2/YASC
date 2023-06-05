@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+    #c {
+        border:1px solid black;
+    }
+    </style>
+</head>
+<body>
+<canvas id="c" width="512" height="256"></canvas>
+<button id = 'start'>start</button>
+</body>
+<script>
+addEventListener('load', init);
+function init() {
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.ctx = document.getElementById('c').getContext('2d');
+    gradient = ctx.createLinearGradient(0, 0, 0, 200);
+    gradient.addColorStop(1, '#ADD8E6');
+    gradient.addColorStop(0.65, '#576D74');
+    gradient.addColorStop(0.45, '#FFAA00');
+    gradient.addColorStop(0, '#FF0000');
+    ctx.fillStyle = gradient;
+    let button = document.getElementById('start');
+    button.onclick = ()=>{
+        if (!navigator.mediaDevices?.enumerateDevices) {
+            console.log("enumerateDevices() not supported.");
+        } else {
+            // List cameras and microphones.
+            navigator.mediaDevices
+                .enumerateDevices()
+                .then(async(devices) => {
+                    devices.forEach((device) => {
+                        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+                    });
+                    stream = await navigator.mediaDevices.getUserMedia({audio:{deviceId:{exact: "default"}}})
+                })
+                .catch((err) => {
+                    console.error(`${err.name}: ${err.message}`);
+                });
+        }
+    }
+
+}
+function draw() {
+    var array = new Uint8Array(analyser.frequencyBinCount);
+    analyser.getByteFrequencyData(array);
+    ctx.clearRect(0, 0, 512, 256);
+    for (var i = 0; i < array.length; i++) {
+        ctx.fillRect(i * 2, 256-array[i], 1, 256);
+    }
+    requestAnimationFrame(draw);
+}
+</script>
+</html>
