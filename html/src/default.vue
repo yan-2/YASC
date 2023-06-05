@@ -2,8 +2,6 @@
     <div class="container">
         <img @click="home" v-if="'start'!==currentRouteName" class="arrow-back" src="./assets/home.svg" alt="home" />
         <img @click="connect" v-if="'start'!==currentRouteName" class="gamepad" src="./assets/gamepad.svg" alt="gamepad" />
-<!--        <button @click="sendOSC({name:'Up'},'on','left')">control</button>-->
-<!--        <button @click="sendOSC({name:'Down'},'off','left')">off</button>-->
         <notifications />
         <router-view class="view"/>
     </div>
