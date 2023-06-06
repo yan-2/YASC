@@ -7,7 +7,7 @@ synthesis.
 <div>
 
 ## Video Introduction
-https://youtu.be/8TOCC7nVZ_Q
+https://youtu.be/O9uG8ymz72E
 
 ## Requirements
 + Node.js>=v16
