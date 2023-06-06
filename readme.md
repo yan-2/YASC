@@ -92,7 +92,7 @@ users with an intuitive and interactive tool to set up and customize their perfo
 <img width="120px" src="./readme-image/gui.png">
 <div>
 
-## To do
+## ToDo
 + Recorder sound improvement at high frequency.
 + Hint of keys and actions in Dino game.
 + Customize note options.
