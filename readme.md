@@ -96,3 +96,4 @@ users with an intuitive and interactive tool to set up and customize their perfo
 + Recorder sound improvement at high frequency.
 + Hint of keys and actions in Dino game.
 + Customize note options.
++ Support the function to record and playback in performance.
