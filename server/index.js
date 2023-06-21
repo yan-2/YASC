@@ -9,8 +9,9 @@ let app = express()
 
 const path = require('path');
 const parentDir = path.dirname(__dirname);
-
+// serve static
 app.use(express.static('./html/dist'))
+// specify route path
 app.get('/game/hotkeys', (req, res) => {
     res.sendFile(parentDir + '/html/dist/index.html');
 })
@@ -117,7 +118,7 @@ wss.on("connection", function (socket) {
         }
         if(instrument==='freestyle'){
             let address = '/freestyle/switch'
-            console.log('switch')
+            console.log('freestyle switch')
             udpPort.send({
                 address: address,
                 args: []
