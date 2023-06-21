@@ -11,6 +11,7 @@ import DefaultPage from './default.vue'
 
 import './components/reset.css'
 import './components/pure-min.css'
+import './components/global.css'
 
 const routes = [
     {
