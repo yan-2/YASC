@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import {Audio,AudioGet,GetMeyda} from "./audio";
+import {Audio,AudioGet,GetMeyda} from "../components/audio";
 import {
     Scene,
     PerspectiveCamera,
