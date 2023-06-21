@@ -9,8 +9,8 @@ import Home from './pages/home.vue'
 import Hotkeys from './pages/hotkeys.vue'
 import DefaultPage from './default.vue'
 
-import './assets/reset.css'
-import './assets/pure-min.css'
+import './components/reset.css'
+import './components/pure-min.css'
 
 const routes = [
     {
