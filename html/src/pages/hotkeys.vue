@@ -44,7 +44,7 @@
                         </div>
                         <div class="pure-control-group">
                             <label for="aligned-name">Vertical Move</label>
-                            <select class="custom-select select" v-model="form.LVerticalMove">
+                            <select disabled class="custom-select select" v-model="form.LVerticalMove">
                                 <option v-for="item in leftOperations">{{item}}</option>
                             </select>
                         </div>
@@ -169,7 +169,7 @@
 
                         <div class="pure-control-group">
                             <label for="aligned-name">3D Move</label>
-                            <select class="custom-select select" v-model="form.RVerticalMove">
+                            <select disabled class="custom-select select" v-model="form.RVerticalMove">
                                 <option v-for="item in noteOptions">{{item}}</option>
                             </select>
                         </div>
