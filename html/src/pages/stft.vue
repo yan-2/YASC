@@ -3,7 +3,7 @@
         <details class="controller instruction use-instruction">
             <summary>Use Instruction</summary>
             <ol class="detail">
-                <li><button id="start" class="glow-on-hover" type="button">HOVER ME, THEN CLICK</button></li>
+                <li><button id="start" class="glow-on-hover" type="button">CLICK ME</button></li>
                 <li>Select the entire screen and share the system audio</li>
                 <li>No idea how to play? just play the demo below </li>
                 <li><button class="pure-button submit" @click="mario">Mario play</button></li>
@@ -428,7 +428,7 @@ img {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
-    opacity: 0;
+    opacity: 1;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
 }
