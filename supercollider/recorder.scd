@@ -1,6 +1,5 @@
 (
 
-Server.killAll;
 s.clear;
 s.freeAll;
 Pdef.all.stop;
