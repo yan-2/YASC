@@ -179,7 +179,7 @@ n = NetAddr.new("127.0.0.1", 57120);
 	});
 	if((operation=='amplitude'),{
 		var temp = value;
-				temp.postln;
+				// temp.postln;
 		~volumeSlider.value_(temp);
 		~control_volume = temp;
 	});

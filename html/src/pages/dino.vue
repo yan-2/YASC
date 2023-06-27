@@ -24,8 +24,6 @@
 
 <script>
 import {readConfig} from "@/components/utils";
-import {JoyConLeft} from "@/components/joycon";
-import {leftControls,rightControls} from "@/components/control"
 
 export default {
     name: "dino.vue",
@@ -46,7 +44,6 @@ export default {
         let me = this
         me.hotkeys = readConfig()
         me.notes = me.getNotes(me.hotkeys)
-        console.log(me.notes)
     },
     unmounted() {
         let me = this;
