@@ -94,7 +94,6 @@ users with an intuitive and interactive tool to set up and customize their perfo
 
 ## ToDo
 + Implement features that allow users to record, save, and replay their performances.
-Regarding the sound synthesis:
 + The waveguide model doesn’t behave well at high frequencies. In the short future, multi-modal or multi-dimensional models could be adopted to solve the issue.
 + Offer more sophisticated sound parameters for users to manipulate in SuperCollider.
 + More accurate results might be achieved by incorporating higher-order non-linearities to simulate the wave bouncing behaviour in the real instrument.
