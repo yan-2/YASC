@@ -60,7 +60,7 @@ users with an intuitive and interactive tool to set up and customize their perfo
 + The left controller is responsible for adjusting synthesis parameters in SuperCollider while the right controller is dedicated to play notes. 
 + Additionally, each motion of the Joy-Con controller can be captured and shown in the middle of the page: in this way, you can visually test the working condition of your devices. 
 <div>
-<img width="500px" src="./readme-image/hotkey3.png">
+<img width="500px" src="./readme-image/hotkey.png">
 <div>
 
 + Dino game page: an interactive training tool designed to <b>help you familiarize with custom hotkeys</b>: the jumping action is triggered by the correct Joy-Con button (previously mapped in Hotkey Page). 
