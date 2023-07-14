@@ -107,7 +107,7 @@ users with an intuitive and interactive tool to set up and customize their perfo
     + The reset.css file resets the default CSS styling of the web browser. 
     + The global.css file defines the global CSS styles for the web application. 
     + pure-min.css is a css library, used for basic form style in the hotkey.vue.
-    + hotkey.js includes default configs for hotkey.vue
+    + hotkey.js includes default configs for hotkey.vue.
     + control.js includes the map to Joy-con controllers, used for parsing and capture actions.
     + utils.js contains common js methods.
     + joy-con/ is used for connecting Joy-Con controllers, it didn't install via npm cause its content changed a bit for adopting "import".
