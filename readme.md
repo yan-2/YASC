@@ -94,8 +94,16 @@ users with an intuitive and interactive tool to set up and customize their perfo
 
 ## Resource 
 + Server/: contains server file, used for serving whole website.
-+ supercollider/: contains SC file, used for sound generation. 
-+ html/src: contains static files.
++ supercollider/: contains SC file, used for sound generation.
++ html/src:
+  + main.js is the main start for the whole application, including the route definition and pages importation.
+  + pages/ contains the views of whole websites.
+    + home.vue is the homepage of the website(navigation)
+    + dino.vue is the Dino game page.
+    + hotkeys.vue is the hotkey registration page.
+    + stft.vue is the performance page.
+  + assets/ contains all static images.
+  + components/ contains reset.css, global.css and joy-con library
 
 ## ToDo
 + Implement features that allow users to record, save, and replay their performances.
