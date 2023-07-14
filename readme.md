@@ -93,17 +93,20 @@ users with an intuitive and interactive tool to set up and customize their perfo
 <div>
 
 ## Resource 
-+ Server/: contains server file, used for serving whole website.
-+ supercollider/: contains SC file, used for sound generation.
-+ html/src:
-  + main.js is the main start for the whole application, including the route definition and pages importation.
-  + pages/ contains the views of whole websites.
++ server/: contains the server file that is used to serve the web pages.
++ supercollider/: contains the SC file that is used to generate sound.
++ html/src contains the main HTML, JavaScript, and CSS files that are used to render the web pages.
+  + main.js is the main entry point for the web application. It defines the routes for the different pages in the application and imports the different components that are used to render the pages.
+  + pages/ contains the different pages in the web application. Each page is a separate Vue.js component.
     + home.vue is the homepage of the website(navigation)
     + dino.vue is the Dino game page.
     + hotkeys.vue is the hotkey registration page.
     + stft.vue is the performance page.
-  + assets/ contains all static images.
-  + components/ contains reset.css, global.css and joy-con library
+  + assets/ contains all static images that are used in the web application.
+  + components/ contains the reset.css, global.css, and joy-con library.
+    + The reset.css file resets the default CSS styling of the web browser. 
+    + The global.css file defines the global CSS styles for the web application. 
+    + joy-con/ is used for connecting Joy-Con controllers, it didn't install via npm cause  its content changed a bit for adopting "import".
 
 ## ToDo
 + Implement features that allow users to record, save, and replay their performances.
