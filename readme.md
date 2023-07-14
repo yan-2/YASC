@@ -92,6 +92,11 @@ users with an intuitive and interactive tool to set up and customize their perfo
 <img width="120px" src="./readme-image/gui.png">
 <div>
 
+## Resource 
++ Server/: contains server file, used for serving whole website.
++ supercollider/: contains SC file, used for sound generation. 
++ html/src: contains static files.
+
 ## ToDo
 + Implement features that allow users to record, save, and replay their performances.
 + The waveguide model doesn’t behave well at high frequencies. In the short future, multi-modal or multi-dimensional models could be adopted to solve the issue.
