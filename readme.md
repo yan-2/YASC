@@ -9,6 +9,9 @@ synthesis.
 ## Video Introduction
 https://youtu.be/O9uG8ymz72E
 
+## PPT
+https://github.com/yan-zhuang2/YASC/blob/main/Slides.pptx
+
 ## Requirements
 + Node.js>=v16
 + SuperCollider software
