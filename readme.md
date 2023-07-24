@@ -20,7 +20,16 @@ https://youtu.be/O9uG8ymz72E
 cd /server
 npm install
 ```
-## Connect Joy-Con controllers
+## Run the website and SuperCollider
+1. Run server first.
+```bash
+node /server/index.js
+```
+2. Open the address shown in console. http://127.0.0.1:8081/
+3. Open the files in /supercollider in SuperCollider and run the relative code.
+4. Follow the instructions on website and enjoy.
+
+## Connect Joy-Con controllers to PC
 Connect your Joy-Con controllers to PC via Bluetooth: click the button below until your PC detects and connects them.
 <div>
 <img width="250px" src="./readme-image/bluetooth.png">
@@ -31,15 +40,6 @@ Joy-Con controllers consist of two individual units, each containing an analog s
 <div>
 <img width="300px" src="./readme-image/joy-con-map.png">
 <div>
-
-## Run the website and SuperCollider
-1. Run server first.
-```bash
-node /server/index.js
-```
-2. Open the address shown in console. http://127.0.0.1:8081/
-3. Open the files in /supercollider in SuperCollider and run the relative code.
-4. Follow the instructions on website and enjoy.
 
 ## Overall Structure
 The system tracks interaction with Joy-Con controllers and use their serial messages as input. The web system acts as the central interface, providing
