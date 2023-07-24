@@ -15,7 +15,7 @@ https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
 ## Table of Contents
 - [Install And Run](#requirements)
 - [Documentation](#overall-structure)
-- [Source Code organization](#resource)
+- [Source Code organization](#dependency)
 - [Further Improvement](#todo)
 
 
@@ -102,6 +102,15 @@ Joy-Con controllers consist of two individual units, each containing an analog s
 <img width="120px" src="./readme-image/gui.png">
 <div>
 
+## Dependency
++ Vue: provides a structure for building the GUI.
++ Vue Router: offers the capacity for routing locally.
++ joy-con-webhid: connect and parse Joy-Cons instructions(buttons, analog sticks, gyroscope and accelerometer sensors) based on WebHID.
++ osc: reading and writing OSC messages between website, server and SuperCollider.
++ meyda: used for sound analysis in performance page.
++ three: used for 3D graphics in performance page.
++ express: web framework for server, serving the website routes, static files.
+
 ## Resource 
 + server/: contains the server file that is used to serve the web pages.
 + supercollider/: contains the SC file that is used to generate sound.
@@ -109,9 +118,9 @@ Joy-Con controllers consist of two individual units, each containing an analog s
   + main.js is the main entry point for the web application. It defines the routes for the different pages in the application and imports the different components that are used to render the pages.
   + pages/ contains the different pages in the web application. Each page is a separate Vue.js component.
     + home.vue is the homepage of the website(navigation)
-    + dino.vue is the Dino game page.
-    + hotkeys.vue is the hotkey registration page.
-    + stft.vue is the performance page.
+    + dino.vue is the main file of  Dino game page.
+    + hotkeys.vue is main file the hotkey registration page.
+    + stft.vue is the main file of performance page.
   + assets/ contains all static images that are used in the web application.
   + components/ contains the common components.
     + The reset.css file resets the default CSS styling of the web browser. 
