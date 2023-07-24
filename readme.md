@@ -14,8 +14,8 @@ https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
 
 ## Table of Contents
 - [Install and Run](#Requirements)
-- [Documentation](#Overall Structure)
-- [Source Code organization](#source-code-organization)
+- [Documentation](#Overall-Structure)
+- [Source Code organization](#Resource)
 
 
 ## Requirements
