@@ -9,8 +9,14 @@ synthesis.
 ## Video Introduction
 https://youtu.be/O9uG8ymz72E
 
-## PPT
-https://github.com/yan-zhuang2/YASC/blob/main/Slides.pptx
+## Slides
+https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
+
+## Table of Contents
+- [Install and Run](#Requirements)
+- [Documentation](#Overall Structure)
+- [Source Code organization](#source-code-organization)
+
 
 ## Requirements
 + Node.js>=v16
@@ -38,17 +44,17 @@ Connect your Joy-Con controllers to PC via Bluetooth: click the button below unt
 <img width="250px" src="./readme-image/bluetooth.png">
 <div>
 
-## Introduction of Joy-Con controllers
-Joy-Con controllers consist of two individual units, each containing an analog stick, an array of buttons, a gyroscope and motion sensors (accelerometers). In this project, the left controller is used to control synthesis parameters and the right one is responsible for playing notes.
-<div>
-<img width="300px" src="./readme-image/joy-con-map.png">
-<div>
-
 ## Overall Structure
 The system tracks interaction with Joy-Con controllers and use their serial messages as input. The web system acts as the central interface, providing
 users with an intuitive and interactive tool to set up and customize their performance experience. SuperCollider serves as sound synthesis engine: it generates the sound according to the commands sent from web system via Open Sound Control (OSC) protocol. Finally, the audio output can be captured by web system to provide a visual feedback.      
 <div>
 <img width="600px" src="./readme-image/overall.png">
+<div>
+
+## Introduction of Joy-Con controllers
+Joy-Con controllers consist of two individual units, each containing an analog stick, an array of buttons, a gyroscope and motion sensors (accelerometers). In this project, the left controller is used to control synthesis parameters and the right one is responsible for playing notes.
+<div>
+<img width="300px" src="./readme-image/joy-con-map.png">
 <div>
 
 ## Website Introduction
