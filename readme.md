@@ -111,7 +111,7 @@ Joy-Con controllers consist of two individual units, each containing an analog s
 + three: used for 3D graphics in performance page.
 + express: web framework for server, serving the website routes, static files.
 
-## Resource 
+## File Organization
 + server/: contains the server file that is used to serve the web pages.
 + supercollider/: contains the SC file that is used to generate sound.
 + html/src contains the main HTML, JavaScript, and CSS files that are used to render the web pages.
