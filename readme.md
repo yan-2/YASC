@@ -131,6 +131,17 @@ Joy-Con controllers consist of two individual units, each containing an analog s
     + utils.js contains common js methods.
     + joy-con/ is used for connecting Joy-Con controllers, it didn't install via npm cause its content changed a bit for adopting "import".
 
+## supercollider/recorder.scd
++ https://github.com/yan-zhuang2/YASC/blob/main/supercollider/recorder.scd
++ The main synthesis part is 'waveguideFlute', which follows Perry Cook’s recorder model.
+  <div>
+  <img width="500px" src="./readme-image/perry-cooker.png">
+  <div>
++ The initial sound (sum1) is generated through a clipped noise modulated by an envelope and summed with a low frequency sinusoidal oscillator to simulate vibrato.
++ The second sound (sum2) is obtained as the sum of the first one and the actual output processed by a cubic interpolated delay line (used for bore effect emulation), modulated by a coefficient smaller than one (to prevent instability in the feedback loop).
++ The second sound (sum2) is processed by another cubic interpolated delay line and the cubic polynomial x minus 3 to the power of x is computed for each sample: this result is then summed to the actual output  modulated by a new small coefficient.
++ Finally, a low-pass filter is applied to the sound.( simulate the natural decay of high frequencies in a flute).
+
 ## ToDo
 + Implement features that allow users to record, save, and replay their performances.
 + The waveguide model doesn’t behave well at high frequencies. In the short future, multi-modal or multi-dimensional models could be adopted to solve the issue.
