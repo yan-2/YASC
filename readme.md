@@ -15,14 +15,14 @@ https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
 ## Table of Contents
 - [Install and Run](#requirements)
 - [Documentation](#overall-structure)
-  - [Overall Structure](#overall-structure)
-  - [Website Introduction](#website-introduction)
+  - [Overall structure](#overall-structure)
+  - [Website introduction](#website-introduction)
   - [SuperCollider introduction](#superCollider-introduction)
-- [Source Code organization](#dependency)
+- [Source code organization](#dependency)
   - [Dependency](#dependency)
   - [File organization](#file-organization)
   - [Flute sound synthesis](#sound-synthesis-on-supercolliderrecorderscd)
-- [Further Improvement](#todo)
+- [Further improvement](#todo)
 
 
 ## Requirements
