@@ -231,6 +231,7 @@ export default {
     mounted() {
         let me = this
         me.refreshConfig()
+        // bind 3D motion track
         const rootStyle = document.querySelector('.sub-container').style;
         const visualize = (joyCon, packet) => {
             if (!packet || !packet.actualOrientation) {

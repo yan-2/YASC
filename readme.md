@@ -21,7 +21,7 @@ https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
 - [Source Code organization](#dependency)
   - [Dependency](#dependency)
   - [File organization](#file-organization)
-  - [Flute sound synthesis](#supercolliderrecorderscd)
+  - [Flute sound synthesis](#sound-synthesis-on-supercolliderrecorderscd)
 - [Further Improvement](#todo)
 
 
@@ -137,7 +137,7 @@ Joy-Con controllers consist of two individual units, each containing an analog s
     + utils.js contains common js methods.
     + joy-con/ is used for connecting Joy-Con controllers, it didn't install via npm cause its content changed a bit for adopting "import".
 
-## supercollider/recorder.scd
+## Sound synthesis on supercollider/recorder.scd
 + https://github.com/yan-zhuang2/YASC/blob/main/supercollider/recorder.scd
 + The main synthesis part is 'waveguideFlute', which follows Perry Cook’s recorder model.
   <div>

@@ -60,6 +60,7 @@ export default {
                     window[vendors[x] + 'CancelAnimationFrame'] ||
                     window[vendors[x] + 'CancelRequestAnimationFrame'];
             }
+            // Fallback for environments that lack native requestAnimationFrame support.
             if (!window.requestAnimationFrame)
                 window.requestAnimationFrame = function (callback, element) {
                     var currTime = new Date().getTime();
@@ -70,6 +71,7 @@ export default {
                     lastTime = currTime + timeToCall;
                     return id;
                 };
+            // Fallback for environments that lack native
             if (!window.cancelAnimationFrame)
                 window.cancelAnimationFrame = function (id) {
                     clearTimeout(id);
