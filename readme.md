@@ -42,7 +42,7 @@ npm install
 node /server/index.js
 ```
 2. Open the address shown in console. http://127.0.0.1:8081/
-3. Open the file in /supercollider in SuperCollider and run the code (`Ctrl + Enter`).
+3. Open the file in /supercollider in SuperCollider and run the code (`Ctrl + Enter` on windows).
 4. Follow the instructions on website and enjoy.
 
 ## Connect Joy-Con controllers to PC
