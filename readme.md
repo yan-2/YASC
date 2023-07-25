@@ -17,7 +17,7 @@ https://github.com/yan-zhuang2/YASC/blob/main/Slides.pdf
 - [Documentation](#overall-structure)
   - [Overall structure](#overall-structure)
   - [Website introduction](#website-introduction)
-  - [SuperCollider introduction](#superCollider-introduction)
+  - [SuperCollider introduction](#supercollider-introduction)
 - [Source code organization](#dependency)
   - [Dependency](#dependency)
   - [File organization](#file-organization)
